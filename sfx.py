@@ -9,7 +9,7 @@ import random
 
 class mySFX:
     def __init__(self):
-        self.sfxNumber = 1
+        self.sfxNumber = 0
         self.sfxMax = 2
         self.speed = 100
 
@@ -60,7 +60,7 @@ class mySFX:
             }
         display.clear()
 
-        for b in range(8, -1, -1):
+        for b in range(9, 0, -1):
             for i in range(0, 3):
                 display.set_pixel(2+points[i][0], 2+points[i][1], b)
                 display.set_pixel(2-points[i][0], 2+points[i][1], b)
@@ -68,7 +68,7 @@ class mySFX:
                 display.set_pixel(2-points[i][0], 2-points[i][1], b)
                 sleep(10)
             sleep(50)
-        sleep(500)
+        sleep(100)
 
     def cycle(self, direction):
         self.sfxNumber += direction
